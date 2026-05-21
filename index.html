@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>실시간 4목 (Connect 4)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="auth-screen">
+    <h1>🔴 실시간 4목 🔵</h1>
+    
+    <button id="btn-create" class="btn-create">방 생성 (홍팀)</button>
+    
+    <div class="input-group">
+        <input type="number" id="room-code-input" placeholder="방 코드 (4자리)" min="1000" max="9999">
+        <button id="btn-join" class="btn-join">참여 (청팀)</button>
+    </div>
+
+    <div class="admin-group">
+        <input type="password" id="admin-pw" placeholder="관리자 비밀번호">
+        <button id="btn-reset-all" class="btn-reset">모든 방 초기화</button>
+    </div>
+</div>
+
+<div id="game-screen" class="hidden">
+    <div id="status-bar">
+        <div id="room-info">방: <span id="display-room-code"></span> (<span id="my-team"></span>)</div>
+        <div id="turn-indicator">대기 중...</div>
+    </div>
+    
+    <div id="board">
+        </div>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
