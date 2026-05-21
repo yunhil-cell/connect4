@@ -5,13 +5,13 @@ import { getDatabase, ref, set, get, update, onValue, remove, child } from "http
 
 // [필수] 본인의 Firebase Config로 교체하세요
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    databaseURL: "YOUR_DATABASE_URL",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyAzDc8nErqYcYYy-itp2Tk9WZExy3PBlIU",
+  authDomain: "battleship-f08f8.firebaseapp.com",
+  databaseURL: "https://battleship-f08f8-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "battleship-f08f8",
+  storageBucket: "battleship-f08f8.firebasestorage.app",
+  messagingSenderId: "1146329001",
+  appId: "1:1146329001:web:f2d698e5661582ee1f96b8"
 };
 
 const app = initializeApp(firebaseConfig);
