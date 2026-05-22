@@ -270,7 +270,7 @@ function checkWin(row, col, team) {
 // 관리자 강제 리셋 (방폭)
 document.getElementById('btn-reset-all').addEventListener('click', async () => {
     const pw = document.getElementById('admin-pw').value;
-    if (pw === 'admin1234') { // 선생님용 간단한 비밀번호 예시
+    if (pw === 'reset') { // 선생님용 간단한 비밀번호 예시
         await remove(ref(db, DB_ROOT));
         alert("모든 방이 초기화되었습니다.");
     } else {
