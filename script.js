@@ -277,3 +277,11 @@ document.getElementById('btn-reset-all').addEventListener('click', async () => {
         alert("비밀번호가 틀렸습니다.");
     }
 });
+
+// 게임 규칙 버튼 처리
+document.getElementById('rule-btn').addEventListener('click', () => {
+    document.getElementById('rule-overlay').classList.remove('hidden');
+});
+document.getElementById('close-rule-btn').addEventListener('click', () => {
+    document.getElementById('rule-overlay').classList.add('hidden');
+});
