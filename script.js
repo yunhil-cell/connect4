@@ -163,6 +163,19 @@ function joinRoomSession(code, team) {
             gameActive = false;
             turnIndicator.innerText = data.winner === myTeam ? "승리했습니다! (5초 후 종료)" : "패배했습니다... (5초 후 종료)";
             turnIndicator.style.color = data.winner === myTeam ? "#27ae60" : "#c0392b";
+            
+            const overlay = document.getElementById('result-overlay');
+            const resultText = document.getElementById('result-text');
+            if (overlay && resultText) {
+                if (data.winner === myTeam) {
+                    resultText.innerText = "🎉 승리 🎉";
+                    resultText.className = "win";
+                } else {
+                    resultText.innerText = "💀 패배 💀";
+                    resultText.className = "lose";
+                }
+                overlay.classList.remove('hidden');
+            }
         }
     });
 }
